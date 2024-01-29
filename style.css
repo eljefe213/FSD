@@ -53,24 +53,6 @@ header {
   font-size: 30px;
   color: white;
 }
-
-/* Affichage du menu latéral lorsqu'il est actif */
-.navbar-menu.active {
-  display: flex;
-}
-
-/* Styles pour les liens du menu latéral */
-.navbar-menu a {
-  padding: 10px 20px;
-  color: var(--dark);
-  text-decoration: none;
-  display: block;
-}
-
-.navbar-menu a:hover {
-  background-color: var(--light-grey);
-}
-
 .navbar-nav {
   list-style: none;
   display: flex;
@@ -82,17 +64,15 @@ header {
 }
   
 .nav-link {
-    margin: 0 0.5rem;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: color var(--trans);
+    padding: 10px 15px; /* Ajustez selon l'espacement souhaité */
 }
   
 .nav-link:hover {
     color: var(--green);
 }
-
 .home{
     min-height: 100vh;
     padding-top: 7rem;
@@ -324,16 +304,18 @@ input {
   }
 
   .nav-item {
-      margin-right: 20px; /* Ajustez selon l'espacement souhaité */
+    margin-right: 20px; /* Ajustez selon l'espacement souhaité */
   }
 
   .nav-link {
-      color: #fff; /* Assurez-vous que la couleur est visible sur le fond */
-      text-decoration: none;
-      padding: 10px 15px; /* Ajustez selon l'espacement souhaité */
+    color: #fff; /* Assurez-vous que la couleur est visible sur le fond */
+    text-decoration: none;
+    padding: 10px 15px; /* Ajustez selon l'espacement souhaité */
   }
+
+  /* Assurez-vous que le menu latéral n'est pas affiché sur les écrans plus larges */
   .navbar-menu {
-    display: none; /* Assurez-vous que le menu mobile n'est pas affiché sur les écrans plus larges */
+    display: block; /* ou 'flex' si vous voulez que les éléments soient en ligne */
   }
 }
 @media (max-width: 991px) {
